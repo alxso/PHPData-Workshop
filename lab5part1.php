@@ -56,7 +56,7 @@ and (preg_match("/^[- '\p{L}]+$/u", $lname)==1 ? true : false)
 ){
 
 	$data= array($fname,$mname,$lname,$sal,$age,$email,$phone,$arrival);
-	$fp = fopen('/home/issoys/public_html/icd0007_lab5_issoys/registration.csv', 'a+');
+	$fp = fopen('registration.csv', 'a+');
 	fputcsv($fp, $data);
 	fclose($fp);
 	$counter = file_get_contents("counter.txt");
